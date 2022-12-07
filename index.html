@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/Quartz_bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="mPlayer">
+        <div class="bgPlayer">
+            <div class="menuBar">
+                <span class="material-icons menuBarr" id="menuBarr">
+                    menu
+                </span>
+                <div class="tableMusicGroup" id="tableMusicGroup">
+                    <div class="tableScroll"><br><hr style="margin-bottom: 0; margin-top: 15px;">
+                        <div id="blockMusicGroup">
+                            <table id="tableGroup">
+                                
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="imgCenter">
+                <img id="imageChange" class="image"
+                    src=""
+                    alt="">
+            </div>
+            <div id="myPlayer">
+                <audio id="audioElemnt">
+                    <source src="">
+                </audio>
+                <div class="textNameMusic timeAll">
+                    <div id="current"></div>
+                    <div id="duration"></div>
+                </div>
+                <div class="currentPosition">
+                    <input type="range" id="currentPosition" value="0">
+                </div>
+                <div class="textNameMusic textAlig">
+                    <div>
+                        <div>
+                            <h4 id="nameMusic"></h4>
+                        </div>
+                        <span id="compositor"></span>
+                    </div>
+                </div>
+                <div class="currentPosition spanPlay" id="spanPlay">
+                    <span class="material-icons btnPlay" id="prevBtn">
+                        skip_previous
+                    </span>
+                    <span class="material-icons btnPlay" id="btnPlay">
+                        play_arrow
+                    </span>
+                    <span class="material-icons  btnPlay" id="nextBtn">
+                        skip_next
+                    </span>
+                </div>
+                <hr style="margin: 0;">
+                <div class="iconsMenu">
+                    <div><span class="material-icons iconMenu" id="favor">
+                            favorite
+                        </span></div>
+                    <div><span class="material-icons iconMenu" id="replayBtn">
+                            replay
+                        </span></div>
+                    <div>
+                        <span class="material-icons iconMenu" id="shuffle">
+                            shuffle
+                        </span>
+                    </div>
+                    <div class="volumeRelative" id="volumeRelative">
+                        <span class="material-icons iconMenu" id="volumeMax">
+                            volume_down
+                        </span>
+                        <div class="volumeChange"><input type="range" id="currentVolume" value="0.05" min="0" max="1"
+                                step="0.01"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

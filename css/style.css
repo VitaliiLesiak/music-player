@@ -1,0 +1,263 @@
+body {
+	position: relative;
+	z-index: 111;
+}
+.mPlayer {
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	height: 100vh;
+}
+#myPlayer {
+	margin-top: 10px;
+	padding: 10px;
+	padding-bottom: 20px;
+}
+
+.imgCenter {
+	position: relative;
+	width: 100%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	height: 50%;
+	padding-bottom: 0;
+}
+#imageChange {
+	width: 100%;
+	object-fit: cover;
+	height: 100%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.spanPlay span {
+	margin: 0 10px;
+	position: relative;
+}
+.btnPlay {
+	cursor: pointer;
+}
+.bgPlayer {
+	background-color: rgb(33, 33, 33);
+	position: relative;
+	border-radius: 10px;
+	width: 300px;
+	height: 500px;
+}
+#current {
+	margin-left: 5px;
+}
+#currentVolume {
+	width: 70px;
+	padding: 10px 5px;
+	border-radius: 5px;
+}
+
+.currentPosition {
+	padding: 20px;
+	padding-top: 0;
+}
+.volumeChange {
+	width: 100%;
+	display: none;
+	position: absolute;
+	top: -30px;
+	left: 0;
+	align-items: center;
+}
+.menuBarr {
+	position: absolute;
+	top: 5px;
+	text-shadow: 1px 1px 0px black;
+	background-color: rgba(0, 0, 0, 0.5);
+	left: 5px;
+	z-index: 1000;
+	cursor: pointer;
+	margin: 2px;
+	padding: 2.5px;
+}
+.tableMusicGroup {
+	position: absolute;
+	background-color: #111;
+	border-right: 1px solid black;
+	border-radius: 10px;
+	opacity: 0;
+	width: 0%;
+	height: 100%;
+	top: 0;
+	transition: all .1s;
+	left: 0;
+}
+.tableScroll {
+	width: 100%;
+	height: 100%;
+}
+#blockMusicGroup {
+	width: 100.3%;
+	height: 83.5%;
+	overflow-y: scroll;
+}
+#blockMusicGroup::-webkit-scrollbar {
+    width: 0;
+}
+
+.tableMusicGroup.active {
+	opacity: 1;
+	z-index: 5;
+	width: 100%;
+	transition: all .1s;
+}
+.spanPlay {
+	padding-top: 20px;
+}
+.spanPlay.active {
+	position: absolute;
+	left: 0;
+	justify-content: start;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: rgb(35, 35, 35);
+	z-index: 10000;
+	bottom: 0;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+#tableGroup td {
+	cursor: pointer;
+	height: 40px;
+	background-color: #1d1d1d;
+  	border: 1px solid black;
+	padding: 5px 10px;
+	font-size: 10px;
+	
+}
+#tableGroup tr {
+	color: #f0f0f0;
+}
+#tableGroup tr:hover {
+	color: #77c3b1;
+}
+
+.textNameMusic, .currentPosition {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.textAlig {
+	text-align: center;
+}
+.volumeRelative:hover .volumeChange {
+	display: flex;
+}
+.textAlig span {
+	text-transform: uppercase;
+	font-size: 11px;
+	line-height: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+	color: #777;
+}
+.favorLike.active {
+	color: red;
+}
+.textAlig h4 {
+	margin: 0;
+	margin-top: 5px;
+	padding: 0;
+	font-size: 12px;
+    line-height: 11px;
+    font-family: 'Open Sans';
+	text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+}
+.fzise {
+	font-size: 12px;
+}
+.timeAll {
+	width: 100%;
+	padding: 0 21px;
+	padding-left: 14px;
+	font-weight: 100;
+	justify-content: space-between;
+}
+#currentPosition {
+	width: 100%;
+}
+input[type=range] {
+	border: 0;
+}
+.volumeChange {
+	transform: rotate(270deg);
+}
+input[type=range]+.thumb .value {
+	display: none;
+}
+input[type=range]+.thumb {
+	display: none;
+}
+.iconsMenu {
+	display: flex;
+	width: 100%;
+	margin-top: 5px;
+	padding: 5px;
+	justify-content: space-between;
+}
+.iconsMenu span {
+	margin-top: 5px;
+	cursor: pointer;
+	font-size: 20px;
+}
+.volumeRelative.active {
+	position: absolute;
+	z-index: 11000;
+	padding: 10px 10px;
+	right: 80px;
+	bottom: -4px;
+}
+.volumeRelative.active .volumeChange {
+	display: block;
+	transform: rotate(0);
+	top: -2px;
+	left: 30px;
+}
+.iconsMenu span {
+	margin-top: 5px;
+	cursor: pointer;
+	font-size: 20px;
+}
+.iconsMenu span.active {
+	color: red;
+}
+.menuBarr.active {
+	color: red;
+}
+.menuBarr.active{
+	background-color: rgba(0, 0, 0, 0);
+}
+.menuBarr.active .menuBarr:hover {
+	color: red;
+}
+.material-icons:hover {
+	color: #77c3b1;
+}
+
+#menuBarr:hover {
+	color: red;
+}
+.material-icons {
+	user-select: none;
+}
+.volumeRelative {
+	position: relative;
+}
+.groupMusic {
+	color: white;
+}
+#tableGroup .hoverColor {
+	color: white;
+}
+#tableGroup .material-icons:hover, .groupMusic.active {
+	color: red;
+}
